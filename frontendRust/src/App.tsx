@@ -20,7 +20,7 @@ export default function App() {
       body: JSON.stringify({ text }),
     });
     const created: Note = await res.json();
-    setNotes((n) => [created, ...n]);
+    setNotes((n) => [...n, created]);
     setText("");
   }
 
